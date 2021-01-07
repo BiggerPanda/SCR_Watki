@@ -1,0 +1,169 @@
+1 zad
+po uruchomieniu mojego programu watki raz wykonuja sie w kolejnosci raz losowo. Widac to ze jeszcze wszystkie watki nie sa stworzone a wątki zaczynają sie juz sie wykonywac.
+losowosc wyswietlania watków wynika z algorytmów szeregowania zadań w systemie
+Created thread 0
+Created thread 1
+Created thread 2
+Created thread 3
+Hello SCR! Written by thread #0!
+Created thread 4
+Created thread 5
+Created thread 6
+Created thread 7
+Hello SCR! Written by thread #7!
+Hello SCR! Written by thread #6!
+Hello SCR! Written by thread #5!
+Hello SCR! Written by thread #4!
+Hello SCR! Written by thread #1!
+Hello SCR! Written by thread #2!
+Hello SCR! Written by thread #3!
+
+2 zad
+wyświetlanie wątków w losowej kolejnosci wynika z algorytmów szeregowania zadan w systemie.
+przez dodanie fukncji sleep czekamy na utworzenie wszystkich watków i ich wyswietlanie nie jest takie same 
+main(): Created 32 threads.
+0: Hello World!
+1: Hello World!
+2: Hello World!
+3: Hello World!
+4: Hello World!
+5: Hello World!
+6: Hello World!
+7: Hello World!
+8: Hello World!
+9: Hello World!
+10: Hello World!
+12: Hello World!
+14: Hello World!
+15: Hello World!
+16: Hello World!
+17: Hello World!
+18: Hello World!
+19: Hello World!
+21: Hello World!
+22: Hello World!
+23: Hello World!
+24: Hello World!
+27: Hello World!
+20: Hello World!
+13: Hello World!
+29: Hello World!
+11: Hello World!
+28: Hello World!
+31: Hello World!
+30: Hello World!
+26: Hello World!
+25: Hello World!
+
+main(): Created 32 threads.
+0: Hello World!
+1: Hello World!
+29: Hello World!
+2: Hello World!
+31: Hello World!
+10: Hello World!
+12: Hello World!
+18: Hello World!
+9: Hello World!
+15: Hello World!
+21: Hello World!
+16: Hello World!
+8: Hello World!
+26: Hello World!
+6: Hello World!
+27: Hello World!
+4: Hello World!
+11: Hello World!
+3: Hello World!
+13: Hello World!
+7: Hello World!
+30: Hello World!
+5: Hello World!
+17: Hello World!
+22: Hello World!
+14: Hello World!
+19: Hello World!
+23: Hello World!
+20: Hello World!
+25: Hello World!
+24: Hello World!
+28: Hello World!
+
+
+3 zad
+w bug3.c jest problem polegający na wyjsciu thread. Zmieniłem tam wskaznik taskid = (long*)threadid; z taskid = *(long*)threadid; oraz pozbyłem sie referencji przy (void *) t
+Creating thread 0
+Creating thread 1
+Creating thread 2
+Creating thread 3
+Creating thread 4
+Creating thread 5
+Creating thread 6
+Creating thread 7
+Hello from thread 0
+Hello from thread 1
+Hello from thread 2
+Hello from thread 3
+Hello from thread 4
+Hello from thread 5
+Hello from thread 6
+Hello from thread 7
+
+wczesniej 
+
+Creating thread 0
+Creating thread 1
+Creating thread 2
+Creating thread 3
+Creating thread 4
+Creating thread 5
+Creating thread 6
+Creating thread 7
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+Hello from thread 8
+
+4 zad
+W zadaniu brakowało funkcji wychodzącej z threadu np thread_exit lub thread_join
+Przed zmianą 
+Main: creating thread 0
+Main: creating thread 1
+thread=0: starting...
+thread=1: starting...
+Main: creating thread 2
+Main: creating thread 3
+Main: creating thread 4
+Main: Done.
+
+Po zmianie 
+Main: creating thread 0
+Main: creating thread 1
+Main: creating thread 2
+thread=0: starting...
+thread=1: starting...
+Main: creating thread 3
+Main: creating thread 4
+thread=4: starting...
+thread=2: starting...
+thread=3: starting...
+thread=1 result=-3.153838e+06. Done.
+thread=0 result=-3.153838e+06. Done.
+thread=3 result=-3.153838e+06. Done.
+thread=2 result=-3.153838e+06. Done.
+thread=4 result=-3.153838e+06. Done.
+Main: Done.
+
+
+
+5 zad
+Zmiane wartosci spowodowałem dodanie tid od resoult. Tid dla kazdego wątku jest inne 
+Różnice w programach są pierwsze widoczne takie ze przy wykonaniu join czeka na pozostałe
+wątki i main konczy działanie jak wszystkie watki sie zakonczą
+detach odłącza wątki od maina przez co on konczy swoje działanie szybciej niz wątki 
+Atrybut joinable watków w detache są ustawione na false 
+
